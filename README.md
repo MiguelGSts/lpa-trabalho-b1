@@ -1,2 +1,3 @@
-# lpa-trabalho-b1
-Trabalho Bimestral de Lógica de Programação e Algoritmos - Sistema em C para controle de entregas.
+# Trabalho Bimestral LPA - Sistema em C para Controle de Entregas
+
+Sistema desenvolvido em linguagem de programação C para o controle e cálculo de valores de uma empresa de entregas.
