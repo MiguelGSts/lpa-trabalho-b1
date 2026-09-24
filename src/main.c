@@ -3,9 +3,6 @@
 #include <locale.h>
 #include "entrega.h"
 
-#define taxaDist 1.2
-#define valProt 7.5
-#define entAdic 4
 
 int main(){
     setlocale(LC_ALL, ".UTF8");
@@ -13,6 +10,7 @@ int main(){
 
     //Variáveis 
     float distKM, peso, subTot, total;
+    float taxaPeso, taxaMod;
     int mod, opProt, opc;
     int c;
     //============================
@@ -21,10 +19,14 @@ int main(){
     printf("Informe a distância da entrega: ");
     scanf("%f", &distKM);
     while((c = getchar()) != '\n' && c != EOF); //Limpeza do buffer
-    distKM = valiDist(distKM, c);
-
-
-
+    distKM = validaVal(distKM);
+    subTot = valKM(distKM);
+    
+    printf("Informe o peso da carga de entrega: ");
+    scanf("%f", &peso);
+    while((c = getchar()) != '\n' && c != EOF);
+    peso = validaVal(peso);
+    taxaPeso = adicPeso(subTot, peso);
 
     return 0;
 }

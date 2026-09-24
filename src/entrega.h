@@ -2,16 +2,11 @@
 #define ENTREGA_H
 
 void title();
-float valiDist(float dist, int c);
 
+float validaVal(float valor);
 
+float valKM(float dist);
 
-
-
-
-
-
-
-
+float adicPeso(float subtotal, float peso);
 
 #endif
