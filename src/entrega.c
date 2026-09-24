@@ -47,3 +47,24 @@ float adicPeso(float subtotal, float peso){
     }
     return subtotal * adic;
 }
+
+void modMenu(){
+    printf("\n=== Modalidade ===\n");
+    printf("[1] Econômica\n");
+    printf("[2] Expressa\n");
+    printf("[3] Prioritária\n");
+    printf("\nInsira a modadlidade de entrega: ");
+}
+
+float adicMod(float subtotal, int opMod){
+    float adic;
+    if(opMod == 1){
+        adic = 0.0;
+    }else if(opMod == 2){
+        adic = 0.15;
+    }else{
+        adic = 0.30;
+    }
+
+    return subtotal * adic;
+}
