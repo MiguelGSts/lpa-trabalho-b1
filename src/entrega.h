@@ -9,4 +9,8 @@ float valKM(float dist);
 
 float adicPeso(float subtotal, float peso);
 
+void modMenu();
+
+float adicMod(float subtotal, int opMod);
+
 #endif

@@ -28,5 +28,19 @@ int main(){
     peso = validaVal(peso);
     taxaPeso = adicPeso(subTot, peso);
 
+    modMenu();
+    scanf("%d", &mod);
+    while(mod<1 || mod>3){
+        printf("\n[OPÇÃO INVÁLIDA]\n");
+        printf("Informe novamente a modadelidade entrega: ");
+        scanf("%d", &mod);
+    }
+    taxaMod = adicMod(subTot, mod);
+
+    /*Método de Verificação (RETIRA-LO AO FINAL PARA ENTREGA)
+    printf("Distância: %.2f; Peso: %.2f; Modalidade: %d\n", distKM, peso, mod);
+    printf("Subtotal: %.2f\n", subTot);
+    printf("Taxa por peso: %.2f; Taxa por modalidade: %.2f\n", taxaPeso, taxaMod);
+    */
     return 0;
 }
