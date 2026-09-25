@@ -49,7 +49,7 @@ float adicPeso(float subtotal, float peso){
     return subtotal * adic;
 }
 
-int modMenu(){
+void modMenu(){
     printf("\n=== Modalidade ===\n");
     printf("[1] Econômica\n");
     printf("[2] Expressa\n");
@@ -57,8 +57,8 @@ int modMenu(){
     printf("\nInsira a modadlidade de entrega: ");
 }
 
-int validaMod(int mod){
-    int c;
+int validaMod(){
+    int c, mod;
     while(scanf("%d", &mod) != 1 || mod<1 || mod>3){
         while((c = getchar()) != '\n' && c != EOF);
         printf("\n[OPÇÃO INVÁLIDA]\n");
@@ -87,7 +87,7 @@ void limpar_tela() {
     #endif
 }
 
-int protecMenu(){
+void protecMenu(){
     printf("\n=== Serviço Adicional de Proteção ===\n");
     printf("Adicione um serviço de proteção adicional para sua entrega!\nValor: R$7,50\n");
     printf("[1] Contratar serviço\n");
@@ -95,13 +95,14 @@ int protecMenu(){
     printf("Insira a opção desejada: ");
 }
 
-int validaProtec(int opProt){
-    int c;
+int validaProtec(){
+    int c, opProt;
     while(scanf("%d", &opProt) != 1 || opProt<0 || opProt>1){
         while((c = getchar()) != '\n' && c != EOF);
         printf("\n[OPÇÃO INVÁLIDA]\n");
         printf("Insira sua opção novamente: ");
     }
+    return opProt;
 }
 
 void tentaAdic(){

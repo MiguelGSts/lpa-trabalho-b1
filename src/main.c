@@ -36,10 +36,12 @@ int main(){
     peso = validaVal(peso);
     taxaPeso = adicPeso(subTot, peso);
 
-    mod = validaMod(modMenu());
+    modMenu();
+    mod = validaMod();
     taxaMod = adicMod(subTot, mod);
 
-    opProt = validaProtec(protecMenu());
+    protecMenu();
+    opProt = validaProtec();
     if(opProt == 1){
         subTot += taxaProtec;
     }
