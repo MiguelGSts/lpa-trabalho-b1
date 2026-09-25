@@ -16,32 +16,29 @@ int main(){
 
     title();
     printf("Informe a distância da entrega: ");
-    scanf("%f", &distKM);
+    while(scanf("%f", &distKM) != 1){
+        while((c = getchar() != '\n' && c != EOF));
+        printf("[VALOR INVÁLIDO]\n");
+        printf("Insira a distância novamente: ");
+    }
     while((c = getchar()) != '\n' && c != EOF); //Limpeza do buffer
     distKM = validaVal(distKM);
     subTot = valKM(distKM);
     
     printf("Informe o peso da carga de entrega: ");
-    scanf("%f", &peso);
+    while(scanf("%f", &peso) != 1){
+        while((c = getchar() != '\n' && c != EOF));
+        printf("[VALOR INVÁLIDO]\n");
+        printf("Insira a distância novamente: ");
+    }
     while((c = getchar()) != '\n' && c != EOF);
     peso = validaVal(peso);
     taxaPeso = adicPeso(subTot, peso);
 
-    modMenu();
-    scanf("%d", &mod);
-    while(mod<1 || mod>3){
-        printf("\n[OPÇÃO INVÁLIDA]\n");
-        printf("Informe novamente a modadelidade entrega: ");
-        scanf("%d", &mod);
-    }
+    mod = validaMod(modMenu());
     taxaMod = adicMod(subTot, mod);
 
-    protecMenu();
-    while(scanf("%d", &opProt) != 1 || opProt<0 || opProt>1){
-        while((c = getchar()) != '\n' && c != EOF);
-        printf("\n[OPÇÃO INVÁLIDA]\n");
-        printf("Insira sua opção novamente: ");
-    }
+    opProt = validaProtec(protecMenu());
     if(opProt == 1){
         subTot += taxaProtec;
     }

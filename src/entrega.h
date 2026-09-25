@@ -9,12 +9,16 @@ float valKM(float dist);
 
 float adicPeso(float subtotal, float peso);
 
-void modMenu();
+int modMenu();
+
+int validaMod(int mod);
 
 float adicMod(float subtotal, int opMod);
 
 void limpar_tela();
 
-void protecMenu();
+int protecMenu();
+
+int validaProtec(int opProt);
 
 #endif
