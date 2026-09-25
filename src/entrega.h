@@ -21,4 +21,8 @@ int protecMenu();
 
 int validaProtec(int opProt);
 
+void tentaAdic();
+
+int validaTenta();
+
 #endif

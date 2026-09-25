@@ -10,9 +10,10 @@ int main(){
 
     float distKM, peso, subTot, total;
     float taxaPeso, taxaMod;
-    int mod, opProt, opc;
+    int mod, opProt, tentEntrega;
     int c;
     const float taxaProtec = 7.5;
+    const float valorTenta = 4.0;
 
     title();
     printf("Informe a distância da entrega: ");
@@ -43,6 +44,9 @@ int main(){
         subTot += taxaProtec;
     }
     
+    tentaAdic();
+    tentEntrega = validaTenta();
+    subTot += (tentEntrega * valorTenta);
 
     /*Método de Verificação (RETIRA-LO AO FINAL PARA ENTREGA)
     printf("Distância: %.2f; Peso: %.2f; Modalidade: %d\n", distKM, peso, mod);

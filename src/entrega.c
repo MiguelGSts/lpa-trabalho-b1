@@ -103,3 +103,19 @@ int validaProtec(int opProt){
         printf("Insira sua opção novamente: ");
     }
 }
+
+void tentaAdic(){
+    printf("\n=== Tentativas adicionais de entrega ===\n");
+    printf("Valor para cada tentativa: R$ 4,00");
+    printf("Informe quantas tentativas adicionais gostaria para sua entrega: ");
+}
+
+int validaTenta(){
+    int c, tentativas;
+    while(scanf("%d", &tentativas) != 1 || tentativas < 0){
+        while((c = getchar()) != '\n' && c != EOF);
+        printf("[QUANTIDADE INVÁLIDA]\n");
+        printf("Insira a quantidade de tentativas novamente: ");
+    }
+    return tentativas;
+}
