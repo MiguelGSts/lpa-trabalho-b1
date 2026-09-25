@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void title(){
     printf("==============\n");
@@ -67,4 +68,18 @@ float adicMod(float subtotal, int opMod){
     }
 
     return subtotal * adic;
+}
+void limpar_tela() {
+    #if defined(_WIN32) || defined(_WIN64)
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
+void protecMenu(){
+    printf("\n=== Serviço Adicional de Proteção ===\n");
+    printf("Adicione um serviço de proteção adicional para sua entrega!\nValor: R$7,50\n");
+    printf("[1] Contratar serviço\n");
+    printf("[0] Não contratar\n");
+    printf("Insira a opção desejada: ");
 }

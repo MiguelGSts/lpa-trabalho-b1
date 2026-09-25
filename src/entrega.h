@@ -13,4 +13,8 @@ void modMenu();
 
 float adicMod(float subtotal, int opMod);
 
+void limpar_tela();
+
+void protecMenu();
+
 #endif
