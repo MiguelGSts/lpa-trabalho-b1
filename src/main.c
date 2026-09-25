@@ -2,18 +2,17 @@
 #include <windows.h>
 #include <locale.h>
 #include "entrega.h"
-
+#include <stdlib.h>
 
 int main(){
     setlocale(LC_ALL, ".UTF8");
     SetConsoleOutputCP(CP_UTF8);
 
-    //Variáveis 
     float distKM, peso, subTot, total;
     float taxaPeso, taxaMod;
     int mod, opProt, opc;
     int c;
-    //============================
+    const float taxaProtec = 7.5;
 
     title();
     printf("Informe a distância da entrega: ");
@@ -36,6 +35,17 @@ int main(){
         scanf("%d", &mod);
     }
     taxaMod = adicMod(subTot, mod);
+
+    protecMenu();
+    while(scanf("%d", &opProt) != 1 || opProt<0 || opProt>1){
+        while((c = getchar()) != '\n' && c != EOF);
+        printf("\n[OPÇÃO INVÁLIDA]\n");
+        printf("Insira sua opção novamente: ");
+    }
+    if(opProt == 1){
+        subTot += taxaProtec;
+    }
+    
 
     /*Método de Verificação (RETIRA-LO AO FINAL PARA ENTREGA)
     printf("Distância: %.2f; Peso: %.2f; Modalidade: %d\n", distKM, peso, mod);
