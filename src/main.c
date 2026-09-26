@@ -50,16 +50,18 @@ int main(){
 
         limpar_tela();
         total = subTot + taxaPeso + taxaMod;
+        title();
         printf("Total do valor da entrega: R$%.2f\n", total);
         
         qntEntrega++;
         totFinal += total;
         if(total>maiorValor){
             maiorValor = total;
-        }else if(total<menorValor){
+        }
+        if(total<menorValor){
             menorValor = total;
         }
-        title();
+    
         printf("Deseja processar outra entrega?\n([1] para Sim e [0] para Não): ");
         opProcess = processValida();
         limpar_tela();
