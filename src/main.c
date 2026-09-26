@@ -58,7 +58,7 @@ int main(){
         if(total>maiorValor){
             maiorValor = total;
         }
-        if(total<menorValor){
+        if(total<menorValor && total > 0){
             menorValor = total;
         }
     
