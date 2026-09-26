@@ -77,10 +77,6 @@ int main(){
     printf("-> Quantidade de entregas Prioritárias: %d\n", qntPriori);
     printf("-> Maior valor de entrega encontrado: R$%.2f\n", maiorValor);
     printf("-> Menor valor de entrega encontrado: R$%.2f\n", menorValor);
-    /*Método de Verificação (RETIRA-LO AO FINAL PARA ENTREGA)
-    printf("Distância: %.2f; Peso: %.2f; Modalidade: %d\n", distKM, peso, mod);
-    printf("Subtotal: %.2f\n", subTot);
-    printf("Taxa por peso: %.2f; Taxa por modalidade: %.2f\n", taxaPeso, taxaMod);
-    */
+    
     return 0;
 }
