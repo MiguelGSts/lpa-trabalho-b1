@@ -58,7 +58,7 @@ int main(){
         if(total>maiorValor){
             maiorValor = total;
         }
-        if(total<menorValor){
+        if(total<menorValor || qntEntrega == 1){
             menorValor = total;
         }
     
