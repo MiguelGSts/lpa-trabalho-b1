@@ -7,14 +7,14 @@ void title(){
     printf("==============\n\n");
 }
 
-float validaVal(float valor){
+float validaVal(){
     int c;
-    
-    while(valor <= 0){
+    float valor;
+    while(scanf("%f", &valor) != 1 || valor <= 0){
+        while((c = getchar()) != '\n' && c != EOF);
         printf("[VALOR INVÁLIDO]\n");
         printf("Informe o valor novamente: ");
-        scanf("%f", &valor);
-        while((c = getchar()) != '\n' && c != EOF);}
+    }
     return valor;
 }
 
@@ -107,7 +107,7 @@ int validaProtec(){
 
 void tentaAdic(){
     printf("\n=== Tentativas adicionais de entrega ===\n");
-    printf("Valor para cada tentativa: R$ 4,00");
+    printf("Valor para cada tentativa: R$ 4,00\n");
     printf("Informe quantas tentativas adicionais gostaria para sua entrega: ");
 }
 
@@ -119,4 +119,14 @@ int validaTenta(){
         printf("Insira a quantidade de tentativas novamente: ");
     }
     return tentativas;
+}
+
+int processValida(){
+    int c, processOp;
+    while(scanf("%d", &processOp) != 1 || processOp<0 || processOp>1){
+        while((c = getchar()) != '\n' && c != EOF);
+        printf("[OPÇÃO INVÁLIDA]\n");
+        printf("Informe a opção novamente: ");
+    }
+    return processOp;
 }

@@ -3,7 +3,7 @@
 
 void title();
 
-float validaVal(float valor);
+float validaVal();
 
 float valKM(float dist);
 
@@ -24,5 +24,7 @@ int validaProtec();
 void tentaAdic();
 
 int validaTenta();
+
+int processValida();
 
 #endif
